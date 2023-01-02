@@ -9,4 +9,8 @@ class DemoUtilsTest {
     void testAdd(){
 
     }
+
+    @Test void testCheckNull(){
+
+    }
 }
