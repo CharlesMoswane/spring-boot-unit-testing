@@ -10,7 +10,13 @@ class DemoUtilsTest {
 
     }
 
-    @Test void testCheckNull(){
+    @Test
+    void testCheckNull(){
+
+    }
+
+    @Test
+    void testMultiply(){
 
     }
 }
