@@ -19,4 +19,9 @@ class DemoUtilsTest {
     void testMultiply(){
 
     }
+
+    @Test
+    void testIsGreater(){
+
+    }
 }
