@@ -15,6 +15,7 @@ class DemoUtilsTest {
 
     @Test
     void testNullAndNotNull(){
-
+        assertNull(demo.checkNull(null));
+        assertNotNull(demo);
     }
 }
