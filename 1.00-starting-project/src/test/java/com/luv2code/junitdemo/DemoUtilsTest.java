@@ -7,7 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class DemoUtilsTest {
     @Test
     void testEqualsAndNotEquals(){
+        DemoUtils demo = new DemoUtils();
 
+        assertEquals(6,demo.add(3,3));
     }
 
     @Test
