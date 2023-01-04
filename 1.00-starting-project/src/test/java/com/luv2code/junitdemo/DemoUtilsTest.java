@@ -17,9 +17,4 @@ class DemoUtilsTest {
     void testCheckNull(){
 
     }
-
-    @Test
-    void testMultiply(){
-
-    }
 }
