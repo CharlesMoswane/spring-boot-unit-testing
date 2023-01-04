@@ -10,6 +10,7 @@ class DemoUtilsTest {
         DemoUtils demo = new DemoUtils();
 
         assertEquals(6,demo.add(3,3));
+        assertNotEquals(5,demo.add(2,-3));
     }
 
     @Test
