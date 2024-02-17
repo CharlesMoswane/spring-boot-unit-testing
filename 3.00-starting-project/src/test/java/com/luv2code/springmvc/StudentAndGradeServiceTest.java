@@ -92,6 +92,7 @@ public class StudentAndGradeServiceTest {
         deletedCollegeStudent = studentDao.findById(1);
         deletedMathGrade = mathGradeDao.findById(1);
         deletedScienceGrade = scienceGradeDao.findById(1);
+        deletedHistoryGrade = historyGradeDao.findById(1);
 
         assertFalse(deletedCollegeStudent.isPresent(), "Return False");
     }
