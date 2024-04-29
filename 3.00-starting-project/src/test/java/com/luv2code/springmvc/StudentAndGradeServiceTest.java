@@ -1,6 +1,7 @@
 package com.luv2code.springmvc;
 
 import com.luv2code.springmvc.models.CollegeStudent;
+import com.luv2code.springmvc.repository.StudentDao;
 import com.luv2code.springmvc.service.StudentAndGradeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class StudentAndGradeServiceTest {
 
     @Autowired
     private StudentAndGradeService studentService;
+
+    @Autowired
+    private StudentDao studentDao;
 
     @Test
     public void createStudentService() {
