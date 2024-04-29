@@ -1,4 +1,9 @@
 package com.luv2code.springmvc.repository;
 
-public class StudentDao {
+import com.luv2code.springmvc.models.CollegeStudent;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface StudentDao extends CrudRepository<CollegeStudent, Integer> {
 }
