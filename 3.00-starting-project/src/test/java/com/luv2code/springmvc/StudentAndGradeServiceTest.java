@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestPropertySource("/application.properties")
 @SpringBootTest
@@ -22,11 +23,15 @@ public class StudentAndGradeServiceTest {
 
     @Test
     public void createStudentService() {
-
         studentService.createStudent("Charles", "Moswane", "charles.moswane@luv2code_school.com");
 
         CollegeStudent student = studentDao.findByEmailAddress("charles.moswane@luv2code_school.com");
 
         assertEquals("charles.moswane@luv2code_school.com", student.getEmailAddress(), "find by email");
+    }
+
+    @Test
+    public void isStudentNullCheck() {
+        assertTrue(studentService.checkIfStudentIsNull(1));
     }
 }
