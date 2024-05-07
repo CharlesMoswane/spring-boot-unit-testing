@@ -23,6 +23,12 @@ public class StudentAndGradeService {
     }
 
     public boolean checkIfStudentIsNull(int id) {
+        Optional<CollegeStudent> student = studentDao.findById(id);
+
+        if (student.isPresent()) {
+            return true;
+        }
+
         return false;
     }
 }
