@@ -3,6 +3,7 @@ package com.luv2code.springmvc;
 import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.repository.StudentDao;
 import com.luv2code.springmvc.service.StudentAndGradeService;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +46,11 @@ public class StudentAndGradeServiceTest {
         assertTrue(studentService.checkIfStudentIsNull(1));
 
         assertFalse(studentService.checkIfStudentIsNull(0));
+    }
+
+    @AfterEach
+    public void setupAfterTransaction() {
+        jdbc.execute("DELETE FROM student");
+        jdbc.execute("ALTER TABLE student COLUMN ID RESTART WITH 1");
     }
 }
