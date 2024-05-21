@@ -2,7 +2,6 @@ package com.luv2code.springmvc.service;
 
 import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.repository.StudentDao;
-import org.apache.catalina.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,5 +29,9 @@ public class StudentAndGradeService {
         }
 
         return false;
+    }
+
+    public Iterable<CollegeStudent> getGradebook() {
+        return null;
     }
 }
