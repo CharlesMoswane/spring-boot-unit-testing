@@ -48,6 +48,11 @@ public class StudentAndGradeServiceTest {
         assertFalse(studentService.checkIfStudentIsNull(0));
     }
 
+    @Test
+    public void getGradebookService() {
+        Iterable<CollegeStudent> iterableCollegeStudent = studentService.getGradebook();
+    }
+
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
