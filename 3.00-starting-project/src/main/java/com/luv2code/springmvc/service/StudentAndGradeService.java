@@ -32,6 +32,7 @@ public class StudentAndGradeService {
     }
 
     public Iterable<CollegeStudent> getGradebook() {
-        return null;
+        Iterable<CollegeStudent> collegeStudents = studentDao.findAll();
+        return collegeStudents;
     }
 }
