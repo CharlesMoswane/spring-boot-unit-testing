@@ -2,6 +2,7 @@ package com.luv2code.springmvc;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -28,6 +29,11 @@ public class GradebookControllerTest {
     public void setupDatabase() {
         jdbc.execute("insert into student(firstname, lastname, email_address) " +
                 "values ('Carlos', 'Moswane', 'carlos.moswane@luv2code_school.com')");
+    }
+
+    @Test
+    public void getStudentHttpRequest() {
+
     }
 
     @AfterEach
