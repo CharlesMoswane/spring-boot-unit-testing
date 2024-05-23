@@ -1,5 +1,7 @@
 package com.luv2code.springmvc;
 
+import com.luv2code.springmvc.models.CollegeStudent;
+import com.luv2code.springmvc.models.GradebookCollegeStudent;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,7 +35,11 @@ public class GradebookControllerTest {
 
     @Test
     public void getStudentHttpRequest() {
+        CollegeStudent studentOne = new GradebookCollegeStudent("Charles", "Moswane",
+                "carlos.moswane@luv2code_school.com");
 
+        CollegeStudent studentTwo = new GradebookCollegeStudent("Ted", "Mosby",
+                "ted.mosby@luv2code_school.com");
     }
 
     @AfterEach
