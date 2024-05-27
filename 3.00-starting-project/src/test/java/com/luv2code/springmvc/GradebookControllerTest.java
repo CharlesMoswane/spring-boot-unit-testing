@@ -45,7 +45,7 @@ public class GradebookControllerTest {
     }
 
     @Test
-    public void getStudentHttpRequest() {
+    public void getStudentHttpRequest() throws Exception {
         CollegeStudent studentOne = new GradebookCollegeStudent("Charles", "Moswane",
                 "carlos.moswane@luv2code_school.com");
 
