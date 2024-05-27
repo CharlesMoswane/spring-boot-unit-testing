@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.mockito.Mockito.when;
 
 @TestPropertySource("/application.properties")
@@ -51,6 +52,8 @@ public class GradebookControllerTest {
         List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentOne, studentTwo));
 
         when(studentAndGradeServiceMock.getGradebook()).thenReturn(collegeStudentList);
+
+        assertIterableEquals(collegeStudentList, studentAndGradeServiceMock.getGradebook());
     }
 
     @AfterEach
