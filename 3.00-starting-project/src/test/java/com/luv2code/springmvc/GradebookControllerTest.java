@@ -50,7 +50,7 @@ public class GradebookControllerTest {
 
         List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentOne, studentTwo));
 
-
+        when(studentAndGradeServiceMock.getGradebook()).thenReturn(collegeStudentList);
     }
 
     @AfterEach
