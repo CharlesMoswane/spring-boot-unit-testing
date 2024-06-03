@@ -15,6 +15,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +61,10 @@ public class GradebookControllerTest {
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(status().isOk()).andReturn();
+
+        ModelAndView mav = mvcResult.getModelAndView();
+
+
     }
 
     @AfterEach
