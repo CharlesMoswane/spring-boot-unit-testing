@@ -4,6 +4,7 @@ import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.GradebookCollegeStudent;
 import com.luv2code.springmvc.service.StudentAndGradeService;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -42,6 +43,11 @@ public class GradebookControllerTest {
 
     @Mock
     private StudentAndGradeService studentAndGradeServiceMock;
+
+    @BeforeAll
+    public static void setup() {
+
+    }
 
     @BeforeEach
     public void setupDatabase() {
