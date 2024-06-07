@@ -46,7 +46,11 @@ public class GradebookControllerTest {
 
     @BeforeAll
     public static void setup() {
+        request = new MockHttpServletRequest();
 
+        request.setParameter("firstname", "Charles");
+        request.setParameter("lastname", "Moswane");
+        request.setParameter("emailAddress", "charles.moswane@luv2code_school.com");
     }
 
     @BeforeEach
