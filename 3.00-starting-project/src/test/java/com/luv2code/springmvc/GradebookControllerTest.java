@@ -82,7 +82,7 @@ public class GradebookControllerTest {
     }
 
     @Test
-    public void createStudentHttpRequest() {
+    public void createStudentHttpRequest() throws Exception {
 
     }
 
