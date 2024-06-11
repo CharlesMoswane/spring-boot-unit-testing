@@ -81,6 +81,11 @@ public class GradebookControllerTest {
         ModelAndViewAssert.assertViewName(mav, "index");
     }
 
+    @Test
+    public void createStudentHttpRequest() {
+
+    }
+
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
