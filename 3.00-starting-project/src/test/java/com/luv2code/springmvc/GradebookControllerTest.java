@@ -87,7 +87,9 @@ public class GradebookControllerTest {
     public void createStudentHttpRequest() throws Exception {
         MvcResult mvcResult = this.mockMvc.perform(post("/")
                 .contentType(MediaType.APPLICATION_JSON)
-                .param("fistname", request.getParameterValues("fistname"))
+                .param("firstname", request.getParameterValues("firstname"))
+                .param("lastname", request.getParameterValues("lastname"))
+                .param("emailAddress", request.getParameterValues("emailAddress"))
         );
     }
 
