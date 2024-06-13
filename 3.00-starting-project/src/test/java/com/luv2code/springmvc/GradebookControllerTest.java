@@ -94,7 +94,7 @@ public class GradebookControllerTest {
 
         ModelAndView mav = mvcResult.getModelAndView();
 
-
+        ModelAndViewAssert.assertViewName(mav, "index");
     }
 
     @AfterEach
