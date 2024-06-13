@@ -90,7 +90,11 @@ public class GradebookControllerTest {
                 .param("firstname", request.getParameterValues("firstname"))
                 .param("lastname", request.getParameterValues("lastname"))
                 .param("emailAddress", request.getParameterValues("emailAddress"))
-        );
+        ).andExpect(status().isOk()).andReturn();
+
+        ModelAndView mav = mvcResult.getModelAndView();
+
+
     }
 
     @AfterEach
