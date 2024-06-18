@@ -95,6 +95,9 @@ public class GradebookControllerTest {
         ModelAndView mav = mvcResult.getModelAndView();
 
         ModelAndViewAssert.assertViewName(mav, "index");
+
+        CollegeStudent verifyStudent = studentDao
+                .findByEmailAddress("carlos.moswane@luv2code_school.com");
     }
 
     @AfterEach
