@@ -25,7 +25,7 @@ public class GradebookController {
 
     @PostMapping(value = "/")
     public String createStudent( @ModelAttribute("student") CollegeStudent student, Model m) {
-        return "";
+        return "index";
     }
 
 	@GetMapping("/studentInformation/{id}")
