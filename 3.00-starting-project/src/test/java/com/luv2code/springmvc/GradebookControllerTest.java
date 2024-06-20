@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -67,7 +68,7 @@ public class GradebookControllerTest {
 
     @Test
     public void getStudentHttpRequest() throws Exception {
-        CollegeStudent studentOne = new GradebookCollegeStudent("Charles", "Moswane",
+        CollegeStudent studentOne = new GradebookCollegeStudent("Carlos", "Moswane",
                 "carlos.moswane@luv2code_school.com");
 
         CollegeStudent studentTwo = new GradebookCollegeStudent("Ted", "Mosby",
@@ -102,6 +103,8 @@ public class GradebookControllerTest {
 
         CollegeStudent verifyStudent = studentDao
                 .findByEmailAddress("carlos.moswane@luv2code_school.com");
+
+        assertNotNull(verifyStudent, "Student should be found");
     }
 
     @AfterEach
