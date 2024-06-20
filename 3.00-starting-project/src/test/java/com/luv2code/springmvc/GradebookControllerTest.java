@@ -90,7 +90,7 @@ public class GradebookControllerTest {
 
     @Test
     public void createStudentHttpRequest() throws Exception {
-        CollegeStudent studentONe = new CollegeStudent("Charles", Moswane,
+        CollegeStudent studentONe = new CollegeStudent("Charles", "Moswane",
                 "charles.moswane@luv2code_school.com");
 
         MvcResult mvcResult = this.mockMvc.perform(post("/")
