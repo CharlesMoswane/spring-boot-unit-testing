@@ -46,7 +46,7 @@ public class GradebookControllerTest {
     private MockMvc mockMvc;
 
     @Mock
-    private StudentAndGradeService studentAndGradeServiceMock;
+    private StudentAndGradeService studentCreateServiceMock;
 
     @Autowired
     private StudentDao studentDao;
@@ -76,9 +76,9 @@ public class GradebookControllerTest {
 
         List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentOne, studentTwo));
 
-        when(studentAndGradeServiceMock.getGradebook()).thenReturn(collegeStudentList);
+        when(studentCreateServiceMock.getGradebook()).thenReturn(collegeStudentList);
 
-        assertIterableEquals(collegeStudentList, studentAndGradeServiceMock.getGradebook());
+        assertIterableEquals(collegeStudentList, studentCreateServiceMock.getGradebook());
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(status().isOk()).andReturn();
