@@ -95,6 +95,8 @@ public class GradebookControllerTest {
 
         List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentONe));
 
+        when(studentCreateServiceMock.getGradebook()).thenReturn(collegeStudentList);
+
         MvcResult mvcResult = this.mockMvc.perform(post("/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .param("firstname", request.getParameterValues("firstname"))
