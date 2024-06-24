@@ -97,6 +97,8 @@ public class GradebookControllerTest {
 
         when(studentCreateServiceMock.getGradebook()).thenReturn(collegeStudentList);
 
+        assertIterableEquals(collegeStudentList, studentCreateServiceMock.getGradebook());
+
         MvcResult mvcResult = this.mockMvc.perform(post("/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .param("firstname", request.getParameterValues("firstname"))
