@@ -36,35 +36,19 @@
 
 <div class="container">
 
-    	<form class="form-inline" method="POST" th:action="@{/}" th:object="${student}">
-    		<label class="sr-only" for="firstname">Name</label>
-    		<input type="text" class="form-control mb-2 mr-sm-2" name="firstname" placeholder="Enter First Name" required>
-
-    		<label class="sr-only" for="lastname">Name</label>
-    		<input type="text" class="form-control mb-2 mr-sm-2" name="lastname" placeholder="Enter Last Name" required>
-
-    		<label class="sr-only" for="emailAddress">Name</label>
-    		<input type="text" class="form-control mb-2 mr-sm-2" name="emailAddress" placeholder="Enter Email Address" required>
-
-
-    		<button type="submit" class="btn btn-color mb-2">Submit</button>
-    	</form>
-
-    <form class="form-inline">
-        <label class="sr-only">Name</label>
+    <form class="form-inline" method="POST" th:action="@{/}" th:object="${student}">
+        <label class="sr-only" for="firstname">Name</label>
         <input type="text" class="form-control mb-2 mr-sm-2" name="firstname" placeholder="Enter First Name" required>
 
-        <label class="sr-only">Name</label>
+        <label class="sr-only" for="lastname">Name</label>
         <input type="text" class="form-control mb-2 mr-sm-2" name="lastname" placeholder="Enter Last Name" required>
 
-        <label class="sr-only">Name</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" name="emailAddress" placeholder="Enter Email Address"
-               required>
+        <label class="sr-only" for="emailAddress">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="emailAddress" placeholder="Enter Email Address" required>
 
 
-        <button class="btn btn-color mb-2">Submit</button>
+        <button type="submit" class="btn btn-color mb-2">Submit</button>
     </form>
-
 
     <table class="students">
         <tr>
