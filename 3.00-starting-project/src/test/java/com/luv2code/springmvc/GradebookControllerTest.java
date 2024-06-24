@@ -93,6 +93,8 @@ public class GradebookControllerTest {
         CollegeStudent studentONe = new CollegeStudent("Charles", "Moswane",
                 "charles.moswane@luv2code_school.com");
 
+        List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentONe));
+
         MvcResult mvcResult = this.mockMvc.perform(post("/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .param("firstname", request.getParameterValues("firstname"))
