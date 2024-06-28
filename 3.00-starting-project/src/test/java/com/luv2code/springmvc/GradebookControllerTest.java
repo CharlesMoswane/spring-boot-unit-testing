@@ -122,6 +122,12 @@ public class GradebookControllerTest {
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders
                 .get("/delete/student/{id}"))
                 .andExpect(status().isOk()).andReturn();
+
+        ModelAndView mav = mvcResult.getModelAndView();
+
+        ModelAndViewAssert.assertViewName(mav, "index");
+
+        assertFalse(studentDao.findById(1).isPresent());
     }
 
     @AfterEach
