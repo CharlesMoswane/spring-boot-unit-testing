@@ -32,6 +32,11 @@ public class GradebookController {
         return "index";
     }
 
+	@GetMapping("delete/student/{id}")
+	public String deleteStudent(@PathVariable int id, Model m) {
+		return "";
+	}
+
 	@GetMapping("/studentInformation/{id}")
 		public String studentInformation(@PathVariable int id, Model m) {
 		return "studentInformation";
