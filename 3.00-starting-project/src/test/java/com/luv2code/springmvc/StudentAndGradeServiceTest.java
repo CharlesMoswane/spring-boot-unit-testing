@@ -14,6 +14,7 @@ import org.springframework.test.context.jdbc.Sql;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -50,6 +51,11 @@ public class StudentAndGradeServiceTest {
         assertTrue(studentService.checkIfStudentIsNull(1));
 
         assertFalse(studentService.checkIfStudentIsNull(0));
+    }
+
+    @Test
+    public void deleteStudentService() {
+
     }
 
     @Sql("/insertData.sql")
