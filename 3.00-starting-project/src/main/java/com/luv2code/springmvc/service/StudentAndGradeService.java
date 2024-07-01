@@ -31,6 +31,9 @@ public class StudentAndGradeService {
         return false;
     }
 
+    public void deleteStudent(int i) {
+    }
+
     public Iterable<CollegeStudent> getGradebook() {
         Iterable<CollegeStudent> collegeStudents = studentDao.findAll();
         return collegeStudents;
