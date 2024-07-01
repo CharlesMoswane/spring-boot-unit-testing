@@ -120,7 +120,7 @@ public class GradebookControllerTest {
         assertTrue(studentDao.findById(1).isPresent(), "Student with ID 1 should exist before deletion");
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders
-                .get("/delete/student/{id}"))
+                .get("/delete/student/{id}", 1))
                 .andExpect(status().isOk()).andReturn();
 
         ModelAndView mav = mvcResult.getModelAndView();
