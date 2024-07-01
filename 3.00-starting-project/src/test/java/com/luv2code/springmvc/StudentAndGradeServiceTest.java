@@ -55,7 +55,15 @@ public class StudentAndGradeServiceTest {
 
     @Test
     public void deleteStudentService() {
+        Optional<CollegeStudent> deletedCollegeStudent = studentDao.findById(1);
 
+        assertTrue(deletedCollegeStudent.isPresent(), "Return True");
+
+        studentService.deleteStudent(1);
+
+        deletedCollegeStudent = studentDao.findById(1);
+
+        assertFalse(deletedCollegeStudent.isPresent(), "Return False");
     }
 
     @Sql("/insertData.sql")
