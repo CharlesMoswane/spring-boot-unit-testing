@@ -130,6 +130,11 @@ public class GradebookControllerTest {
         assertFalse(studentDao.findById(1).isPresent());
     }
 
+    @Test
+    public void deleteStudentHttpRequestErrorPage() throws Exception {
+
+    }
+
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
