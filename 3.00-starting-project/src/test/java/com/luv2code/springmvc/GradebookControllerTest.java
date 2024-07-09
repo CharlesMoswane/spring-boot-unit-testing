@@ -132,7 +132,9 @@ public class GradebookControllerTest {
 
     @Test
     public void deleteStudentHttpRequestErrorPage() throws Exception {
-
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders
+                .get("/delete/student/{id}", 0))
+                .andExpect(status().isOk()).andReturn();
     }
 
     @AfterEach
