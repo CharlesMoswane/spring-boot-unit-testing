@@ -141,6 +141,15 @@ public class GradebookControllerTest {
         ModelAndViewAssert.assertViewName(mav, "error");
     }
 
+    @Test
+    public  void createGradeService() {
+//        Create the grade
+
+//        Get all grades with studentId
+
+//        Verify there is grades
+    }
+
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
