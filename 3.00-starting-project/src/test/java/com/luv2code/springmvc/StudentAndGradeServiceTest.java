@@ -83,6 +83,7 @@ public class StudentAndGradeServiceTest {
     @Test
     public  void createGradeService() {
 //        Create the grade
+        assertTrue(studentService.createGrade(80.50, 1));
 
 //        Get all grades with studentId
 
