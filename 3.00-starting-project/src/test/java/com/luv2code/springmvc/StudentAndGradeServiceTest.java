@@ -90,6 +90,7 @@ public class StudentAndGradeServiceTest {
         Iterable<MathGrade> mathGrades = mathGradeDao.findGradeByStudentId(1);
 
 //        Verify there is grades
+        assertTrue(mathGrades.iterator().hasNext(), "Student has math grades");
     }
 
     @AfterEach
