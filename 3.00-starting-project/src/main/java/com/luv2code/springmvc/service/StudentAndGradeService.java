@@ -43,6 +43,10 @@ public class StudentAndGradeService {
     }
 
     public boolean createGrade(double grade, int studentId, String gradeType) {
+
+        if (!checkIfStudentIsNull(studentId)) {
+            return false;
+        }
         return false;
     }
 }
