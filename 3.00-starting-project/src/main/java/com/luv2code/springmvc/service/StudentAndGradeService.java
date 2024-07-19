@@ -47,6 +47,12 @@ public class StudentAndGradeService {
         if (!checkIfStudentIsNull(studentId)) {
             return false;
         }
+
+        if (grade >= 0 && grade <= 100) {
+            if (gradeType.equals("math")) {
+                mathGrade.setId(0);
+            }
+        }
         return false;
     }
 }
