@@ -89,9 +89,12 @@ public class StudentAndGradeServiceTest {
     public  void createGradeService() {
 //        Create the grade
         assertTrue(studentService.createGrade(80.50, 1, "math"));
+        assertTrue(studentService.createGrade(80.50,1,"science"));
 
 //        Get all grades with studentId
         Iterable<MathGrade> mathGrades = mathGradeDao.findGradeByStudentId(1);
+
+
 
 //        Verify there is grades
         assertTrue(mathGrades.iterator().hasNext(), "Student has math grades");
