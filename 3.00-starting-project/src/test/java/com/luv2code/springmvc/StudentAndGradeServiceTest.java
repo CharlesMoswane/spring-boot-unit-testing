@@ -2,6 +2,7 @@ package com.luv2code.springmvc;
 
 import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.MathGrade;
+import com.luv2code.springmvc.models.ScienceGrade;
 import com.luv2code.springmvc.repository.MathGradeDao;
 import com.luv2code.springmvc.repository.StudentDao;
 import com.luv2code.springmvc.service.StudentAndGradeService;
@@ -93,7 +94,7 @@ public class StudentAndGradeServiceTest {
 
 //        Get all grades with studentId
         Iterable<MathGrade> mathGrades = mathGradeDao.findGradeByStudentId(1);
-
+        Iterable<ScienceGrade> scienceGrades = scienceGradeDao.findGradeByStudentId(1);
 
 
 //        Verify there is grades
