@@ -64,6 +64,7 @@ public class StudentAndGradeService {
                 mathGrade.setGrade(grade);
                 mathGrade.setStudentId(studentId);
                 mathGradeDao.save(mathGrade);
+                return true;
             }
         }
         return false;
