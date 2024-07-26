@@ -57,6 +57,9 @@ public class StudentAndGradeService {
         if (grade >= 0 && grade <= 100) {
             if (gradeType.equals("math")) {
                 mathGrade.setId(0);
+                mathGrade.setGrade(grade);
+                mathGrade.setStudentId(studentId);
+                mathGradeDao.save(mathGrade);
             }
         }
         return false;
