@@ -39,7 +39,7 @@ public class StudentAndGradeServiceTest {
     private MathGradeDao mathGradeDao;
 
     @Autowired
-    public ScienceGradesDao scienceGradesDao;
+    public ScienceGradesDao scienceGradeDao;
 
     @BeforeEach
     public void setupDatabase() {
