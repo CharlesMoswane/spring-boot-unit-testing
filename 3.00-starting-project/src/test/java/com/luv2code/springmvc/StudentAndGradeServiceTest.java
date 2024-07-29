@@ -4,6 +4,7 @@ import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.MathGrade;
 import com.luv2code.springmvc.models.ScienceGrade;
 import com.luv2code.springmvc.repository.MathGradeDao;
+import com.luv2code.springmvc.repository.ScienceGradesDao;
 import com.luv2code.springmvc.repository.StudentDao;
 import com.luv2code.springmvc.service.StudentAndGradeService;
 import org.junit.jupiter.api.AfterEach;
@@ -36,6 +37,9 @@ public class StudentAndGradeServiceTest {
 
     @Autowired
     private MathGradeDao mathGradeDao;
+
+    @Autowired
+    public ScienceGradesDao scienceGradesDao;
 
     @BeforeEach
     public void setupDatabase() {
