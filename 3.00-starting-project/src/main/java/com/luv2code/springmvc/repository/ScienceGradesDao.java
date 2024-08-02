@@ -1,4 +1,7 @@
 package com.luv2code.springmvc.repository;
 
-public interface ScienceGradesDao {
+import com.luv2code.springmvc.models.ScienceGrade;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ScienceGradesDao extends CrudRepository<ScienceGrade, Integer> {
 }
