@@ -66,6 +66,9 @@ public class StudentAndGradeService {
                 mathGradeDao.save(mathGrade);
                 return true;
             }
+            if (gradeType.equals("science")) {
+                return true;
+            }
         }
         return false;
     }
