@@ -2,6 +2,7 @@ package com.luv2code.springmvc.service;
 
 import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.MathGrade;
+import com.luv2code.springmvc.models.ScienceGrade;
 import com.luv2code.springmvc.repository.MathGradesDao;
 import com.luv2code.springmvc.repository.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class StudentAndGradeService {
     @Autowired
     @Qualifier("mathGrades")
     private MathGrade mathGrade;
+
+    @Autowired
+    @Qualifier("scienceGrades")
+    private ScienceGrade scienceGrade;
 
     @Autowired
     private MathGradesDao mathGradeDao;
