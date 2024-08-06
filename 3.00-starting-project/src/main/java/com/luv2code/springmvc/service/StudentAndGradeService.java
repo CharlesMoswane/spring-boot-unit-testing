@@ -25,11 +25,11 @@ public class StudentAndGradeService {
     private MathGrade mathGrade;
 
     @Autowired
-    @Qualifier("scienceGrades")
-    private ScienceGrade scienceGrade;
+    private MathGradesDao mathGradeDao;
 
     @Autowired
-    private MathGradesDao mathGradeDao;
+    @Qualifier("scienceGrades")
+    private ScienceGrade scienceGrade;
 
     @Autowired
     private ScienceGradesDao scienceGradeDao;
