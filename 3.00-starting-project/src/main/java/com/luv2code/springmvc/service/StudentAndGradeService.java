@@ -78,6 +78,7 @@ public class StudentAndGradeService {
             if (gradeType.equals("science")) {
                 scienceGrade.setId(0);
                 scienceGrade.setGrade(grade);
+                scienceGrade.setStudentId(studentId);
                 return true;
             }
         }
