@@ -79,6 +79,7 @@ public class StudentAndGradeService {
                 scienceGrade.setId(0);
                 scienceGrade.setGrade(grade);
                 scienceGrade.setStudentId(studentId);
+                scienceGradeDao.save(scienceGrade);
                 return true;
             }
         }
