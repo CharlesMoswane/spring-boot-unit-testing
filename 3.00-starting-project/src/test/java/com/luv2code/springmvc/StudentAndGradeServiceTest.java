@@ -106,6 +106,7 @@ public class StudentAndGradeServiceTest {
 //        Verify there is grades
         assertTrue(mathGrades.iterator().hasNext(), "Student has math grades");
         assertTrue(scienceGrades.iterator().hasNext(), "Student has science grades");
+        assertTrue(historyGrades.iterator().hasNext(), "Student has history grades");
     }
 
     @AfterEach
