@@ -105,7 +105,7 @@ public class StudentAndGradeServiceTest {
 //        Get all grades with studentId
         Iterable<MathGrade> mathGrades = mathGradeDao.findGradeByStudentId(1);
         Iterable<ScienceGrade> scienceGrades = scienceGradeDao.findGradeByStudentId(1);
-        Iterable<HistoryGrade> historyGrades = historyGradeDao.findGradByStudentId(1);
+        Iterable<HistoryGrade> historyGrades = historyGradeDao.findGradeByStudentId(1);
 
 //        Verify there is grades
         assertTrue(mathGrades.iterator().hasNext(), "Student has math grades");
