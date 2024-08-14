@@ -82,6 +82,9 @@ public class StudentAndGradeService {
                 scienceGradeDao.save(scienceGrade);
                 return true;
             }
+            if (gradeType.equals("history")) {
+                return true;
+            }
         }
         return false;
     }
