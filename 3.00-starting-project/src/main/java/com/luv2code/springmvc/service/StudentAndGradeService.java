@@ -1,6 +1,7 @@
 package com.luv2code.springmvc.service;
 
 import com.luv2code.springmvc.models.CollegeStudent;
+import com.luv2code.springmvc.models.HistoryGrade;
 import com.luv2code.springmvc.models.MathGrade;
 import com.luv2code.springmvc.models.ScienceGrade;
 import com.luv2code.springmvc.repository.MathGradesDao;
@@ -33,6 +34,10 @@ public class StudentAndGradeService {
 
     @Autowired
     private ScienceGradesDao scienceGradeDao;
+
+    @Autowired
+    @Qualifier("historyGrades")
+    private HistoryGrade historyGrade;
 
     public void createStudent(String firstname, String lastname, String emailAddress) {
         CollegeStudent student = new CollegeStudent(firstname, lastname, emailAddress);
