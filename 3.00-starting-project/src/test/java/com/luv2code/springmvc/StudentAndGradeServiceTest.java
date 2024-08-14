@@ -4,6 +4,7 @@ import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.HistoryGrade;
 import com.luv2code.springmvc.models.MathGrade;
 import com.luv2code.springmvc.models.ScienceGrade;
+import com.luv2code.springmvc.repository.HistoryGradesDao;
 import com.luv2code.springmvc.repository.MathGradesDao;
 import com.luv2code.springmvc.repository.ScienceGradesDao;
 import com.luv2code.springmvc.repository.StudentDao;
@@ -41,6 +42,9 @@ public class StudentAndGradeServiceTest {
 
     @Autowired
     public ScienceGradesDao scienceGradeDao;
+
+    @Autowired
+    public HistoryGradesDao historyGradeDao;
 
     @BeforeEach
     public void setupDatabase() {
