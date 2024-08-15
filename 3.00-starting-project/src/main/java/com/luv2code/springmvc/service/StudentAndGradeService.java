@@ -95,6 +95,7 @@ public class StudentAndGradeService {
                 historyGrade.setId(0);
                 historyGrade.setGrade(grade);
                 historyGrade.setStudentId(studentId);
+                historyGradeDao.save(historyGrade);
                 return true;
             }
         }
