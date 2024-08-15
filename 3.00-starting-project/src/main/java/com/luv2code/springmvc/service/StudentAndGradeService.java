@@ -94,6 +94,7 @@ public class StudentAndGradeService {
             if (gradeType.equals("history")) {
                 historyGrade.setId(0);
                 historyGrade.setGrade(grade);
+                historyGrade.setStudentId(studentId);
                 return true;
             }
         }
