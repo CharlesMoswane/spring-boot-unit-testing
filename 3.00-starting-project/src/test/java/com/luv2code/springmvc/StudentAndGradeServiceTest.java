@@ -116,6 +116,7 @@ public class StudentAndGradeServiceTest {
     @Test
     public void createGradeServiceReturnFalse() {
         assertFalse(studentService.createGrade(105, 1, "math"));
+        assertFalse(studentService.createGrade(-5, 1, "math"));
     }
 
     @AfterEach
