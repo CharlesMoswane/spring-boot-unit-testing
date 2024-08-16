@@ -50,6 +50,8 @@ public class StudentAndGradeServiceTest {
     public void setupDatabase() {
         jdbc.execute("insert into student(firstname, lastname, email_address) " +
                 "values ('Carlos', 'Moswane', 'carlos.moswane@luv2code_school.com')");
+
+        jdbc.execute("insert into math_grade(student_id, grade) values (1, 100.00)");
     }
 
     @Test
