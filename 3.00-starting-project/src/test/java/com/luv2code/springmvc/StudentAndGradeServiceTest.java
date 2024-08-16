@@ -52,6 +52,8 @@ public class StudentAndGradeServiceTest {
                 "values ('Carlos', 'Moswane', 'carlos.moswane@luv2code_school.com')");
 
         jdbc.execute("insert into math_grade(student_id, grade) values (1, 100.00)");
+
+        jdbc.execute("insert into science_grade(student_id, grade) values (1, 100.00)");
     }
 
     @Test
