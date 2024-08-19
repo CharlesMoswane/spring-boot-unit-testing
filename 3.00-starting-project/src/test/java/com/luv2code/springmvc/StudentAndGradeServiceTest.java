@@ -132,6 +132,7 @@ public class StudentAndGradeServiceTest {
         jdbc.execute("DELETE FROM student");
         jdbc.execute("DELETE FROM math_grade");
         jdbc.execute("DELETE FROM science_grade");
+        jdbc.execute("DELETE FROM history_grade");
 
         jdbc.execute("ALTER TABLE student ALTER COLUMN ID RESTART WITH 1");
     }
