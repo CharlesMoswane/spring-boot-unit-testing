@@ -130,6 +130,8 @@ public class StudentAndGradeServiceTest {
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
+        jdbc.execute("DELETE FROM math_grade");
+
         jdbc.execute("ALTER TABLE student ALTER COLUMN ID RESTART WITH 1");
     }
 }
