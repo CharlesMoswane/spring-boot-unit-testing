@@ -54,6 +54,8 @@ public class StudentAndGradeServiceTest {
         jdbc.execute("insert into math_grade(student_id, grade) values (1, 100.00)");
 
         jdbc.execute("insert into science_grade(student_id, grade) values (1, 100.00)");
+
+        jdbc.execute("insert into history_grade(student_id, grade) values (1, 100.00)");
     }
 
     @Test
