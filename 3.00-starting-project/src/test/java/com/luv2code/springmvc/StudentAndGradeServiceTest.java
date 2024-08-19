@@ -136,5 +136,6 @@ public class StudentAndGradeServiceTest {
 
         jdbc.execute("ALTER TABLE student ALTER COLUMN ID RESTART WITH 1");
         jdbc.execute("ALTER TABLE math_grade ALTER COLUMN ID RESTART WITH 1");
+        jdbc.execute("ALTER TABLE science_grade ALTER COLUMN ID RESTART WITH 1");
     }
 }
