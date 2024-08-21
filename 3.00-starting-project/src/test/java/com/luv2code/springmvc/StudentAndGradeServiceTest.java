@@ -117,7 +117,7 @@ public class StudentAndGradeServiceTest {
 //        Verify there is grades
         assertTrue(((Collection<MathGrade>) mathGrades).size() == 2, "Student has math grades");
         assertTrue(((Collection<ScienceGrade>) scienceGrades).size() == 2, "Student has science grades");
-        assertTrue(historyGrades.iterator().hasNext(), "Student has history grades");
+        assertTrue(((Collection<HistoryGrade>) historyGrades).size() == 2, "Student has history grades");
     }
 
     @Test
