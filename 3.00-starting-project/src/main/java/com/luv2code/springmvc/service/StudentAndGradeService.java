@@ -104,6 +104,11 @@ public class StudentAndGradeService {
 
     public int deleteGrade(int id, String gradeType) {
         int studentId = 0;
+
+        if (gradeType.equals("math")) {
+
+        }
+
         return studentId;
     }
 }
