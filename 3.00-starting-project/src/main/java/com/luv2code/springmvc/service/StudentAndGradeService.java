@@ -106,7 +106,10 @@ public class StudentAndGradeService {
         int studentId = 0;
 
         if (gradeType.equals("math")) {
-
+            Optional<MathGrade> grade = mathGradeDao.findById(id);
+            if (!grade.isPresent()) {
+                return studentId;
+            }
         }
 
         return studentId;
