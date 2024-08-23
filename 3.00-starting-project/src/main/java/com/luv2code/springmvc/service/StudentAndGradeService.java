@@ -102,7 +102,7 @@ public class StudentAndGradeService {
         return false;
     }
 
-    public int deleteGrade(int studentId, String gradeType) {
+    public int deleteGrade(int id, String gradeType) {
         return 0;
     }
 }
