@@ -103,5 +103,6 @@ public class StudentAndGradeService {
     }
 
     public int deleteGrade(int studentId, String gradeType) {
+        return 0;
     }
 }
