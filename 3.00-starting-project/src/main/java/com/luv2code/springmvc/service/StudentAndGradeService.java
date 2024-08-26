@@ -110,6 +110,8 @@ public class StudentAndGradeService {
             if (!grade.isPresent()) {
                 return studentId;
             }
+            studentId = grade.get().getStudentId();
+            mathGradeDao.deleteById(id);
         }
 
         return studentId;
