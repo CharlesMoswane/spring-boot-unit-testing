@@ -132,6 +132,8 @@ public class StudentAndGradeServiceTest {
     public void deleteGradeService() {
         assertEquals(1, studentService.deleteGrade(1, "math"),
                 "Returns student id after delete");
+        assertEquals(1, studentService.deleteGrade(1, "science"),
+                "Returns student id after delete");
     }
 
     @AfterEach
