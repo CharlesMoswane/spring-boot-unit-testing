@@ -138,6 +138,11 @@ public class StudentAndGradeServiceTest {
                 "Returns student id after delete");
     }
 
+    @Test
+    public void deleteGradeServiceReturnStudentIdOfZero() {
+
+    }
+
     @AfterEach
     public void setupAfterTransaction() {
         jdbc.execute("DELETE FROM student");
