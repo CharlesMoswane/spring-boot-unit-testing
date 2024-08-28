@@ -127,7 +127,7 @@ public class StudentAndGradeService {
                 return studentId;
             }
             studentId = grade.get().getStudentId();
-            scienceGradeDao.deleteById(id);
+            historyGradeDao.deleteById(id);
         }
 
         return studentId;
