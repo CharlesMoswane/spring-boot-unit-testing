@@ -122,7 +122,7 @@ public class StudentAndGradeService {
             scienceGradeDao.deleteById(id);
         }
         if (gradeType.equals("history")) {
-            Optional<ScienceGrade> grade = scienceGradeDao.findById(id);
+            Optional<HistoryGrade> grade = historyGradeDao.findById(id);
             if (!grade.isPresent()) {
                 return studentId;
             }
