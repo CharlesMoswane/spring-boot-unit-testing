@@ -83,6 +83,7 @@ public class StudentAndGradeServiceTest {
         Optional<HistoryGrade> deletedHistoryGrade = historyGradeDao.findById(1);
 
         assertTrue(deletedCollegeStudent.isPresent(), "Return True");
+        assertTrue(deletedMathGrade.isPresent());
 
         studentService.deleteStudent(1);
 
