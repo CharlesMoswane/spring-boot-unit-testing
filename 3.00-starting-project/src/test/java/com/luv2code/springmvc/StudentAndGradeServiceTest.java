@@ -80,6 +80,7 @@ public class StudentAndGradeServiceTest {
         Optional<CollegeStudent> deletedCollegeStudent = studentDao.findById(1);
         Optional<MathGrade> deletedMathGrade = mathGradeDao.findById(1);
         Optional<ScienceGrade> deletedScienceGrade = scienceGradeDao.findById(1);
+        Optional<HistoryGrade> deletedHistoryGrade = historyGradeDao.findById(1);
 
         assertTrue(deletedCollegeStudent.isPresent(), "Return True");
 
