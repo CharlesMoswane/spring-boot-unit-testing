@@ -78,6 +78,7 @@ public class StudentAndGradeServiceTest {
     @Test
     public void deleteStudentService() {
         Optional<CollegeStudent> deletedCollegeStudent = studentDao.findById(1);
+        Optional<MathGrade> deletedMathGrade = mathGradeDao.findById(1);
 
         assertTrue(deletedCollegeStudent.isPresent(), "Return True");
 
