@@ -84,6 +84,7 @@ public class StudentAndGradeServiceTest {
 
         assertTrue(deletedCollegeStudent.isPresent(), "Return True");
         assertTrue(deletedMathGrade.isPresent());
+        assertTrue(deletedScienceGrade.isPresent());
 
         studentService.deleteStudent(1);
 
