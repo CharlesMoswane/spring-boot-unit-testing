@@ -90,6 +90,7 @@ public class StudentAndGradeServiceTest {
         studentService.deleteStudent(1);
 
         deletedCollegeStudent = studentDao.findById(1);
+        deletedMathGrade = mathGradeDao.findById(1);
 
         assertFalse(deletedCollegeStudent.isPresent(), "Return False");
     }
