@@ -95,6 +95,7 @@ public class StudentAndGradeServiceTest {
         deletedHistoryGrade = historyGradeDao.findById(1);
 
         assertFalse(deletedCollegeStudent.isPresent(), "Return False");
+        assertFalse(deletedMathGrade.isPresent());
     }
 
     @Sql("/insertData.sql")
