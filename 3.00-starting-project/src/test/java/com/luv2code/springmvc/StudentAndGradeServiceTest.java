@@ -97,6 +97,7 @@ public class StudentAndGradeServiceTest {
         assertFalse(deletedCollegeStudent.isPresent(), "Return False");
         assertFalse(deletedMathGrade.isPresent());
         assertFalse(deletedScienceGrade.isPresent());
+        assertFalse(deletedHistoryGrade.isPresent());
     }
 
     @Sql("/insertData.sql")
