@@ -1,5 +1,6 @@
 package com.luv2code.springmvc;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -21,4 +22,10 @@ public class GradebookControllerTest {
 
     @Mock
     private StudentAndGradeServiceTest studentAndGradeServiceTest;
+
+    @BeforeEach
+    public void setupDatabase() {
+        jdbc.execute("insert into student(firstname, lastname, email_address) " +
+                "values ('Carlos', 'Moswane', 'carlos.moswane@luv2code_school.com')");
+    }
 }
