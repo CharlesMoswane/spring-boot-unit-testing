@@ -2,6 +2,7 @@ package com.luv2code.springmvc;
 
 import com.luv2code.springmvc.models.CollegeStudent;
 import com.luv2code.springmvc.models.GradebookCollegeStudent;
+import com.luv2code.springmvc.service.StudentAndGradeService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.mockito.Mockito.when;
+
 @TestPropertySource("/application.properties")
 @AutoConfigureMockMvc
 @SpringBootTest
@@ -29,7 +32,7 @@ public class GradebookControllerTest {
     private MockMvc mockMvc;
 
     @Mock
-    private StudentAndGradeServiceTest studentAndGradeServiceTest;
+    private StudentAndGradeService studentAndGradeServiceMock;
 
     @BeforeEach
     public void setupDatabase() {
@@ -46,6 +49,8 @@ public class GradebookControllerTest {
                 "ted.mosby@luv2code_school.com");
 
         List<CollegeStudent> collegeStudentList = new ArrayList<>(Arrays.asList(studentOne, studentTwo));
+
+
     }
 
     @AfterEach
